@@ -1,7 +1,8 @@
 # Todo List REST API
 
-> **Track**: Backend Web Development | **Week 1 Task**
-> **Program**: Live Pakistan Internship Program
+> **Track**: Backend Web Development | **Week 1 Task**  
+> **Program**: Live Pakistan Internship Program  
+> **Repository**: [hasanimr1/Live-Pakistan-Task-1](https://github.com/hasanimr1/Live-Pakistan-Task-1)
 
 A RESTful API for a Todo List application built with Node.js, Express.js, and MongoDB (Mongoose). Supports full CRUD operations with input validation and centralized error handling.
 
@@ -33,6 +34,14 @@ A RESTful API for a Todo List application built with Node.js, Express.js, and Mo
 
 ```
 Tasks/
+├── Screenshots/                  # Postman test demonstration screenshots
+│   ├── Create_todo.PNG
+│   ├── Deleting Todo.PNG
+│   ├── Fetching By ID.PNG
+│   ├── Fetching data.PNG
+│   ├── Input_validation.PNG
+│   ├── Updateing Todo List.PNG
+│   └── Validating Delete Request.PNG
 ├── src/
 │   ├── config/
 │   │   └── db.js                 # MongoDB connection
@@ -74,7 +83,7 @@ npm install
 Copy `.env.example` to `.env` and fill in the values:
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/todo_db
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/todo_db?retryWrites=true&w=majority
 NODE_ENV=development
 ```
 
@@ -247,6 +256,22 @@ Accepts a partial or full update. At least one field must be provided.
 
 ---
 
+## 📷 Postman Testing Screenshots
+
+Visual demonstration of API tests executed via Postman:
+
+| Test Action | Screenshot Preview |
+|---|---|
+| **Create Todo** | ![Create Todo](./Screenshots/Create_todo.PNG) |
+| **Fetch All Todos** | ![Fetch Data](./Screenshots/Fetching%20data.PNG) |
+| **Fetch Todo By ID** | ![Fetch By ID](./Screenshots/Fetching%20By%20ID.PNG) |
+| **Update Todo Item** | ![Update Todo](./Screenshots/Updateing%20Todo%20List.PNG) |
+| **Delete Todo Item** | ![Delete Todo](./Screenshots/Deleting%20Todo.PNG) |
+| **Input Payload Validation** | ![Input Validation](./Screenshots/Input_validation.PNG) |
+| **Validate Delete Request** | ![Validate Delete](./Screenshots/Validating%20Delete%20Request.PNG) |
+
+---
+
 ## Postman Collection
 
 1. Open Postman and click **Import**.
@@ -262,5 +287,5 @@ Accepts a partial or full update. At least one field must be provided.
 - [x] Input validation and correct HTTP status codes (`200`, `201`, `400`, `404`, `500`)
 - [x] MongoDB integration via Mongoose
 - [x] Modular project structure
-- [x] README documentation
+- [x] Comprehensive `README.md` documentation with embedded Postman test screenshots
 - [x] Exported Postman collection
