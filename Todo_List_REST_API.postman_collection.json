@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "f789a123-4567-89ab-cdef-0123456789ab",
+		"name": "Todo List REST API",
+		"description": "Complete Postman Collection for Live Pakistan Internship - Week 1: Todo List REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"id": "req-1-health",
+			"name": "1. Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/"
+			},
+			"response": []
+		},
+		{
+			"id": "req-2-get-all",
+			"name": "2. Get All Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/todos"
+			},
+			"response": []
+		},
+		{
+			"id": "req-3-create-valid",
+			"name": "3. Create Todo (Valid)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Complete Week 1 Internship Task\",\n  \"description\": \"Build and document Todo List REST API using Node.js and MongoDB.\",\n  \"completed\": false\n}"
+				},
+				"url": "http://localhost:5000/todos"
+			},
+			"response": []
+		},
+		{
+			"id": "req-4-create-invalid",
+			"name": "4. Create Todo (Invalid Payload - Missing Title)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"Missing title payload for validation test\"\n}"
+				},
+				"url": "http://localhost:5000/todos"
+			},
+			"response": []
+		},
+		{
+			"id": "req-5-get-by-id",
+			"name": "5. Get Todo By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/todos/60d5ecb8b3b3b3b300000001"
+			},
+			"response": []
+		},
+		{
+			"id": "req-6-get-invalid-id",
+			"name": "6. Get Todo By ID (Invalid Format)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/todos/invalid_id_format"
+			},
+			"response": []
+		},
+		{
+			"id": "req-7-update-todo",
+			"name": "7. Update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"completed\": true,\n  \"description\": \"Updated description via Postman\"\n}"
+				},
+				"url": "http://localhost:5000/todos/60d5ecb8b3b3b3b300000001"
+			},
+			"response": []
+		},
+		{
+			"id": "req-8-delete-todo",
+			"name": "8. Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/todos/60d5ecb8b3b3b3b300000001"
+			},
+			"response": []
+		}
+	]
+}
